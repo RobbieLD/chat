@@ -21,11 +21,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/chat",
     name: "Chat",
     component: Chat,
-    // beforeEnter: (to, from, next) => {
-    //   const s = store.state.auth.user;
-    //   debugger;
-    //   next();
-    // }
   },
 ];
 
