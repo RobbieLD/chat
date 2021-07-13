@@ -54,7 +54,6 @@ export default defineComponent({
     };
   },
   methods: {
-    // Can this be async?
     authenticate() {
       const request: AuthRequest = {
         username: this.username,
@@ -74,7 +73,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 /* vuetify doesn't have forms yet */
 .input {
   border-radius: 0.5em;

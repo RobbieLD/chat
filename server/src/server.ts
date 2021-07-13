@@ -48,10 +48,13 @@ io.use(socketioJwt.authorize({
 io.on('connection', (socket: any) => {
   const user = socket.decoded_token;
   console.log(user, 'has connected');
+  io.emit('message', `${user} as connected`);
+
 
   // Disconnection handler
   socket.on('disconnect', () => {
     console.log(user, 'has disconnected');
+    io.emit('message', `${user} has disconnected`);
   });
 
   // Message handler
