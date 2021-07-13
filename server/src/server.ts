@@ -5,11 +5,14 @@ import jwt from 'jsonwebtoken';
 import socketioJwt from 'socketio-jwt'
 import { Server } from "socket.io";
 import UserService from './services/user-service';
+import cors from 'cors';
 
 const app = express();
 const server = http.createServer(app);
 
 const userService = new UserService();
+
+app.use(cors());
 
 // Basic Unauthenticated Routes
 app.get('/', (req, res) => {
